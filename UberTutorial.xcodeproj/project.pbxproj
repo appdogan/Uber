@@ -16,6 +16,7 @@
 		D742848129DC7FE00025124B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742848029DC7FE00025124B /* LoginController.swift */; };
 		D742848329DC94300025124B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742848229DC94300025124B /* Extensions.swift */; };
 		D742848529DCC1D90025124B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742848429DCC1D90025124B /* SignUpController.swift */; };
+		D768AF5A29DF43B900AA2F52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D768AF5929DF43B900AA2F52 /* GoogleService-Info.plist */; };
 		D76F6F4829DE104700B2A18D /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F6F4729DE104700B2A18D /* AuthButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D742848029DC7FE00025124B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D742848229DC94300025124B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D742848429DCC1D90025124B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		D768AF5929DF43B900AA2F52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D76F6F4729DE104700B2A18D /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,13 +64,13 @@
 				82E82D88DB1C410843331552 /* Pods-UberTutorial.debug.xcconfig */,
 				05844AEAC178487F592D7C23 /* Pods-UberTutorial.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D742845B29DC7E9D0025124B = {
 			isa = PBXGroup;
 			children = (
+				D768AF5929DF43B900AA2F52 /* GoogleService-Info.plist */,
 				D742846629DC7E9D0025124B /* UberTutorial */,
 				D742846529DC7E9D0025124B /* Products */,
 				3C45A8C063AF06639CD79B98 /* Pods */,
@@ -202,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D742847429DC7E9E0025124B /* LaunchScreen.storyboard in Resources */,
+				D768AF5A29DF43B900AA2F52 /* GoogleService-Info.plist in Resources */,
 				D742847129DC7E9E0025124B /* Assets.xcassets in Resources */,
 				D742846F29DC7E9D0025124B /* Main.storyboard in Resources */,
 			);
