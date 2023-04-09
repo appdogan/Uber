@@ -83,9 +83,19 @@ class LoginController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("DEBUG: Failed to log user in with error \(error.localizedDescription)")
+                return
             }
             
             print("Successfully logged user in..")
+
+            let keyWindow = UIApplication
+                .shared
+                .connectedScenes
+                .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                .last { $0.isKeyWindow }
+            guard let controller = keyWindow?.rootViewController as? HomeController else { return }
+            controller.configureUI()
+            self.dismiss(animated: true)
         }
     }
     

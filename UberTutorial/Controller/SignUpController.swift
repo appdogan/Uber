@@ -117,6 +117,14 @@ class SignUpController: UIViewController {
             
             Database.database().reference().child("users").child(uid).updateChildValues(values) { error, ref in
                 print("Successfully registered user and saved data..")
+                let keyWindow = UIApplication
+                    .shared
+                    .connectedScenes
+                    .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                    .last { $0.isKeyWindow }
+                guard let controller = keyWindow?.rootViewController as? HomeController else { return }
+                controller.configureUI()
+                self.dismiss(animated: true)
             }
         }
         
