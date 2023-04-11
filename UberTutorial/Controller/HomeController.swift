@@ -65,6 +65,7 @@ class HomeController: UIViewController {
         locationActivationView.setDimensions(height: 50, witdh: view.frame.width - 64)
         locationActivationView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         locationActivationView.alpha = 0
+        locationActivationView.delegate = self
         
         UIView.animate(withDuration: 2) {
             self.locationActivationView.alpha = 1
@@ -115,5 +116,11 @@ extension HomeController: CLLocationManagerDelegate {
         if status == .authorizedWhenInUse {
             locationManager.requestAlwaysAuthorization()
         }
+    }
+}
+
+extension HomeController: LocationInputActivationViewDelegate {
+    func presentLocationInputVİew() {
+        print("DEBUG: Handle present location input view..")
     }
 }
