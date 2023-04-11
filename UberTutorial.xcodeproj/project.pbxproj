@@ -16,6 +16,7 @@
 		D742848129DC7FE00025124B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742848029DC7FE00025124B /* LoginController.swift */; };
 		D742848329DC94300025124B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742848229DC94300025124B /* Extensions.swift */; };
 		D742848529DCC1D90025124B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742848429DCC1D90025124B /* SignUpController.swift */; };
+		D74B493129E5A53800B3C8FE /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B493029E5A53800B3C8FE /* LocationInputActivationView.swift */; };
 		D768AF5A29DF43B900AA2F52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D768AF5929DF43B900AA2F52 /* GoogleService-Info.plist */; };
 		D76F6F4829DE104700B2A18D /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F6F4729DE104700B2A18D /* AuthButton.swift */; };
 		D780718F29E0AF9200E87A04 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780718E29E0AF9200E87A04 /* HomeController.swift */; };
@@ -35,6 +36,7 @@
 		D742848029DC7FE00025124B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D742848229DC94300025124B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D742848429DCC1D90025124B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		D74B493029E5A53800B3C8FE /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
 		D768AF5929DF43B900AA2F52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D76F6F4729DE104700B2A18D /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		D780718E29E0AF9200E87A04 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D76F6F4729DE104700B2A18D /* AuthButton.swift */,
+				D74B493029E5A53800B3C8FE /* LocationInputActivationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				D742848129DC7FE00025124B /* LoginController.swift in Sources */,
 				D742846829DC7E9D0025124B /* AppDelegate.swift in Sources */,
 				D742846A29DC7E9D0025124B /* SceneDelegate.swift in Sources */,
+				D74B493129E5A53800B3C8FE /* LocationInputActivationView.swift in Sources */,
 				D742848329DC94300025124B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +423,9 @@
 				DEVELOPMENT_TEAM = AK73S735TN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UberTutorial/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to access your location so we can find you rides nearby";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow us to access your location so we can find you rides nearby";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location so we can find you rides nearby";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -448,6 +455,9 @@
 				DEVELOPMENT_TEAM = AK73S735TN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UberTutorial/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to access your location so we can find you rides nearby";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow us to access your location so we can find you rides nearby";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location so we can find you rides nearby";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
