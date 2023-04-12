@@ -17,13 +17,13 @@ class HomeController: UIViewController {
     private let locationManager = CLLocationManager()
     
     private let locationActivationView = LocationInputActivationView()
+    private let locaitonInputView = LocationInputView()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
-        let locationManager = CLLocationManager()
         enableLocationServices()
       //  signOut()
     }
@@ -79,6 +79,20 @@ class HomeController: UIViewController {
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
     }
+    
+    func configureLocationInputView() {
+        locaitonInputView.delegate = self
+        view.addSubview(locaitonInputView)
+        locaitonInputView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 200)
+        locaitonInputView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5) {
+            self.locaitonInputView.alpha = 1
+        } completion: { _ in
+            print("DEBUG: Present table view..")
+        }
+        
+    }
         
 }
 
@@ -119,8 +133,26 @@ extension HomeController: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - LocationInputActivationViewDelegate
+
 extension HomeController: LocationInputActivationViewDelegate {
     func presentLocationInputVİew() {
-        print("DEBUG: Handle present location input view..")
+        locationActivationView.alpha = 0
+        configureLocationInputView()
+    }
+}
+
+// MARK: - LocationInputViewDelegate
+
+extension HomeController: LocationInputViewDelegate {
+    func dissmisLocationInputView() {
+        UIView.animate(withDuration: 0.3) {
+            self.locaitonInputView.alpha = 0
+        } completion: { _ in
+            UIView.animate(withDuration: 0.3) {
+                self.locationActivationView.alpha = 1
+            }
+        }
+
     }
 }
